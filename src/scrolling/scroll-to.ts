@@ -54,6 +54,10 @@ export function scrollTo(
   scroll();
 }
 
+export function cancelScrollTo(scrollbar: I.Scrollbar) {
+  cancelAnimationFrame(animationIDStorage.get(scrollbar) as number);
+}
+
 /**
  * easeOutCubic
  */

@@ -23,6 +23,7 @@ import {
 
 import {
   scrollTo,
+  cancelScrollTo,
   setPosition,
   scrollIntoView,
 } from './scrolling/';
@@ -265,6 +266,13 @@ export class Scrollbar implements I.Scrollbar {
     options: Partial<I.ScrollToOptions> = {},
   ) {
     scrollTo(this, x, y, duration, options);
+  }
+
+  /** 
+   * Cancels running scrollTo 
+   */
+  cancelScrollTo() {
+    cancelScrollTo(this)
   }
 
   /**
